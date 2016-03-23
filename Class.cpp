@@ -2,37 +2,28 @@
 #include<cmath>
 #include<iomanip>
 #include<fstream>
+#include"Class.h"
+
 using namespace std;
 
-class Class1
-{
-		private:
-		int mass; int height;
-		float bmi;
+	void Class1::set(int h, int m)
+	{
+		mass = m;
+		height = h;	
+	}
 		
-		public:
+	void Class1::setManupilate()
+	{
+		bmi=mass/pow((float)height/100,2);
+	}
 		
-		void set(int h, int m)
-		{
-			mass = m;
-			height = h;	
-		}
+	float Class1::getBMI()
+	{
+		return bmi;
+	}
 		
-		void setManupilate()
-		{
-			bmi=mass/pow((float)height/100,2);
-		}
-		
-		float getBMI()
-		{
-			return bmi;
-		}
-		
-		
-		string range()
-		{
-			
-		
+	string Class1::range()
+	{
 		if(bmi<15)
 			return "Very severely underweight";
 			
@@ -56,7 +47,4 @@ class Class1
 			
 		if(bmi>=40)
 			return "Obese Class III (Very severely obese)";	
-	}
-	
-};
-
+	};

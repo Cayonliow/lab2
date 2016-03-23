@@ -9,7 +9,7 @@ int main()
 {
 	int mass,height;
 	Class1 cls1;
-	ifstream recordBMI("file.in.cpp",ios::in);
+	ifstream recordBMI("file.in",ios::in);
 	if(!recordBMI)
 	{
 		cerr<<"Failed opening the file recordBMI"<<endl;
